@@ -6,7 +6,7 @@
 #
 # Creation Date : 12-09-2013
 #
-# Last Modified : Fri 13 Sep 2013 01:31:26 PM CDT
+# Last Modified : Sat 14 Sep 2013 12:25:45 PM CDT
 #
 # Created By : Huan Gui (huangui2@illinois.edu) 
 #
@@ -14,6 +14,7 @@
 
 
 import xml.etree.ElementTree as ET
+import sys
 
 doi_dict = {} 
 doi_fout = open("../../rawdata/doi_paper.txt", "w") 
@@ -38,8 +39,8 @@ author_id = 0
 venue_id = 0 
 org_id = 0 
 
-files = ["./PRA.xml"]
-#files = ["./PR.xml", "./PRA.xml", "./PRB.xml", "./PRC.xml", "./PRD.xml", "./PRE.xml", "./PRI.xml", "./PRL.xml", "./PRSTAB.xml", "./PRSTPER.xml", "./RMP.xml"]
+files = []
+files = ["./PR.xml", "./PRA.xml", "./PRB.xml", "./PRC.xml", "./PRD.xml", "./PRE.xml", "./PRI.xml", "./PRL.2.xml", "./PRSTAB.xml", "./PRSTPER.xml", "./RMP.xml"]
 for f in files:
     tree = ET.parse(f)
     root = tree.getroot()
